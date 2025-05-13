@@ -1,0 +1,116 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/GIS_Boolean_Raster.jpg" />
+     <title>Danaee's Portfolio</title>
+    <meta name="description" content="A GIS portfolio made by Danaée Félix.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">My GIS Journey</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:danaeefel@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Patwin Land</div>
+        <div class="body-text">Let's take a deep dive on UC Davis Campus on Patwin Land</div>
+        <image class="project-header-image" src="../assets/images/icy.png">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text">This is a current map of all the counties in the state of California. The map is overlapped with where the Patwin tribe territory used to be located. The purpose of this map's creation was to provide additional substancer to the land acknowledgement my team had created for our community partner, the Center for Child and Family Studies (CCFS). The requested that my team redesign the site while taking decolonization into account, thus it was important to implement this map in our land acknowledgement for the site.</div>
+          <div class="body-text">This map was created via QGIS. The red point that locates the Center for Child and Family Studies was from the coordinates of a picture of the site taken during one of my team's site visits. Such coordinates were placed into Google Earth Pro which was then pinned. The pin for the site was then exported as an svg file to QGIS. I was able to change the pin to a red dot via Symbology. Additionally, I played around with the color contrast of the Patwin territory and the current California counties through Symbology; both feature classes were created with categorized symbols. Finally, an inset map of the UC Davis Campus map was applied to provide the audience a zoomed in view of where the CCFS is located on the college campus.</div>
+        </div>
+      </div>
+      <div class="gallery-image-container width">
+        <img src="../assets/images/IceCold.gif" class="gallery-image">
+        <span class="image-caption">ArcGIS Online map point location.</span>
+      </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/krishna-wijaya-05b10b245">
+        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="mailto:krishnawijaya@ymail.com">
+        <image src="../assets/icons/email.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="https://www.buymeacoffee.com">
+        <image src="../assets/icons/coffee.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>

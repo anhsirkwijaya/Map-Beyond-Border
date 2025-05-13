@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Map Beyond Border</title>
+
+  <!-- SEO & Meta -->
+  <meta name="description" content="Krishna Wijaya's GIS Portfolio – Map Beyond Border showcases spatial storytelling, map design, and geospatial analysis." />
+  <meta name="author" content="Krishna Wijaya" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Calcite Components -->
+  <script type="module" src="https://js.arcgis.com/calcite-components/2.4.0/calcite.esm.js"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.4.0/calcite.css" />
+
+  <style>
+    :root {
+      --accent-yellow: #FFD700;
+      --dark: #000;
+      --light: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Century Gothic', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--dark);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--light);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom: 3px solid var(--accent-yellow);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      background-color: var(--dark);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--accent-yellow);
+      color: var(--dark);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid var(--dark);
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  filter: brightness(60%);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--light);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    iframe {
+      border-radius: 8px;
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-buttons calcite-button {
+      --calcite-color-brand: var(--dark);
+      border: 2px solid var(--dark);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f5f5f5;
+      border: 2px solid var(--dark);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card calcite-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .cv-download {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cv-download a {
+      color: var(--dark);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Map Beyond Border</div>
+    <nav>
+      <a class="button" href="/G:/GIS RECOURCES/Web Template/Map Beyond Border/index.html">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <a href="#portfolio">Works ▾</a>
+        <div class="dropdown-content">
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Services</a>
+        </div>
+      </div>
+      <a href="#cv" class="active">Resume</a>
+    </nav>
+  </header>
+
+  <!-- CV -->
+  <section id="cv">
+    <h2>Resume</h2>
+    <div class="cv-download">
+      <p>You can view or download my resume below:</p>
+      <a href="/G:/GIS RECOURCES/Web Template/Map Beyond Border/assets/media/Resume Krishna Wijaya 2024.pdf" download>📄 Download Resume (PDF)</a>
+    </div>
+  </section>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Map Beyond Border — All rights reserved.
+  </footer>
+
+</body>
+</html>
