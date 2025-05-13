@@ -103,43 +103,6 @@
       margin: auto;
     }
 
-    .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 2px solid var(--dark);
-}
-
-.portfolio-item img {
-  width: 100%;
-  display: block;
-  transition: filter 0.3s ease;
-}
-
-.portfolio-item:hover img {
-  filter: brightness(60%);
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: var(--light);
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-
     h2 {
       text-align: center;
       margin-bottom: 2rem;
@@ -209,15 +172,17 @@
       color: #666;
     }
   </style>
+</head>
+<body>
 
 <header>
     <div class="logo">Map Beyond Border</div>
     <nav>
         <!-- Add active class here for the Home page -->
         <a class="button" href="../index.html">Home</a>
-        <a class="button" href="pages/about.html">About</a>
+        <a class="button active" href="pages/about.html">About</a>
         <div class="dropdown">
-            <a class="active" href="#portfolio"> Works ▾</a>
+            <a href="#portfolio">Works ▾</a>
             <div class="dropdown-content">
                 <a class="button" href="pages/portofolio.html">Portfolio</a>
                 <a class="button" href="pages/services.html">Services</a>
@@ -227,68 +192,17 @@
     </nav>
 </header>
 
-<!-- Portfolio -->
-<section id="portofolio">
-  <h2>Maps & Portofolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="../assets/media/map1.png" alt="map1">
-      <div class="caption">Figure 1</div>
-    </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map2.png" alt="map2">
-      <div class="caption">Figure 2</div>
-    </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map3.gif" alt="map3">
-      <div class="caption">Figure 3</div>
-    </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map4.png" alt="map4">
-      <div class="caption">Figure 4</div>
-    </div>
-    <!-- Add more items as needed -->
-  </div>
-</section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align: center;">I'm a GIS enthusiast with passion for maps, spatial storytelling, and geospatial technology for public good. I love combining data, design, and maps to create meaningful and engaging user experiences.</p>
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <h2>Maps & Portfolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item" data-full="assets/maps/map1-full.jpg" data-detail="map1.html">
-      <img src="assets/maps/map1-thumb.jpg" alt="Map 1">
-      <div class="caption">Figure 1</div>
+    <div class="social-buttons">
+      <calcite-button icon-start="linkedin" appearance="outline" scale="m" href="https://www.linkedin.com/in/krishna-wijaya-05b10b245/" target="_blank" aria-label="LinkedIn">LinkedIn</calcite-button>
+      <calcite-button icon-start="instagram" appearance="outline" scale="m" href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</calcite-button>
+      <calcite-button icon-start="envelope" appearance="outline" scale="m" href="mailto:krishnawijaya@ymail.com" aria-label="Email">Email</calcite-button>
     </div>
-    <div class="portfolio-item" data-full="assets/maps/map2-full.jpg" data-detail="map2.html">
-      <img src="assets/maps/map2-thumb.jpg" alt="Map 2">
-      <div class="caption">Figure 2</div>
-    </div>
-    <div class="portfolio-item" data-full="assets/maps/map3-full.gif" data-detail="map3.html">
-      <img src="assets/maps/map3-thumb.gif" alt="Map 3">
-      <div class="caption">Figure 3</div>
-    </div>
-    <div class="portfolio-item" data-full="assets/maps/map4-full.jpg" data-detail="map4.html">
-      <img src="assets/maps/map4-thumb.jpg" alt="Map 4">
-      <div class="caption">Figure 4</div>
-    </div>
-    <!-- More items can be added here -->
-  </div>
-</section>
-
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <div class="lightbox-controls">
-    <button id="zoom-in">🔍+</button>
-    <button id="zoom-out">🔍-</button>
-    <button id="fullscreen">⛶</button>
-    <button id="share-twitter">🐦</button>
-    <button id="share-facebook">📘</button>
-    <a id="detail-link" class="detail-button" href="#" target="_blank">🔗 View Details</a>
-  </div>
-</div>
-
+  </section>
 
   <footer>
     &copy; 2025 Map Beyond Border — All rights reserved.

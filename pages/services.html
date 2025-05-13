@@ -103,43 +103,6 @@
       margin: auto;
     }
 
-    .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 2px solid var(--dark);
-}
-
-.portfolio-item img {
-  width: 100%;
-  display: block;
-  transition: filter 0.3s ease;
-}
-
-.portfolio-item:hover img {
-  filter: brightness(60%);
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: var(--light);
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-
     h2 {
       text-align: center;
       margin-bottom: 2rem;
@@ -209,6 +172,8 @@
       color: #666;
     }
   </style>
+</head>
+<body>
 
 <header>
     <div class="logo">Map Beyond Border</div>
@@ -227,68 +192,27 @@
     </nav>
 </header>
 
-<!-- Portfolio -->
-<section id="portofolio">
-  <h2>Maps & Portofolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="../assets/media/map1.png" alt="map1">
-      <div class="caption">Figure 1</div>
+  <!-- Services -->
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <calcite-icon icon="geographic-link-chart-layout" scale="m"></calcite-icon>
+        <h3>Spatial Analysis & Modelling</h3>
+        <p>Gain insights from spatial data using advanced geospatial techniques.</p>
+      </div>
+      <div class="card">
+        <calcite-icon icon="surface" scale="m"></calcite-icon>
+        <h3>Mapmaking & Data Visual</h3>
+        <p>Create beautiful, informative maps and interactive dashboards.</p>
+      </div>
+      <div class="card">
+        <calcite-icon icon="survey" scale="m"></calcite-icon>
+        <h3>GIS Consultancy & Coaching</h3>
+        <p>Get expert advice, training, and support for your geospatial projects.</p>
+      </div>
     </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map2.png" alt="map2">
-      <div class="caption">Figure 2</div>
-    </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map3.gif" alt="map3">
-      <div class="caption">Figure 3</div>
-    </div>
-    <div class="portfolio-item">
-      <img src="../assets/media/map4.png" alt="map4">
-      <div class="caption">Figure 4</div>
-    </div>
-    <!-- Add more items as needed -->
-  </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <h2>Maps & Portfolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item" data-full="assets/maps/map1-full.jpg" data-detail="map1.html">
-      <img src="assets/maps/map1-thumb.jpg" alt="Map 1">
-      <div class="caption">Figure 1</div>
-    </div>
-    <div class="portfolio-item" data-full="assets/maps/map2-full.jpg" data-detail="map2.html">
-      <img src="assets/maps/map2-thumb.jpg" alt="Map 2">
-      <div class="caption">Figure 2</div>
-    </div>
-    <div class="portfolio-item" data-full="assets/maps/map3-full.gif" data-detail="map3.html">
-      <img src="assets/maps/map3-thumb.gif" alt="Map 3">
-      <div class="caption">Figure 3</div>
-    </div>
-    <div class="portfolio-item" data-full="assets/maps/map4-full.jpg" data-detail="map4.html">
-      <img src="assets/maps/map4-thumb.jpg" alt="Map 4">
-      <div class="caption">Figure 4</div>
-    </div>
-    <!-- More items can be added here -->
-  </div>
-</section>
-
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <div class="lightbox-controls">
-    <button id="zoom-in">🔍+</button>
-    <button id="zoom-out">🔍-</button>
-    <button id="fullscreen">⛶</button>
-    <button id="share-twitter">🐦</button>
-    <button id="share-facebook">📘</button>
-    <a id="detail-link" class="detail-button" href="#" target="_blank">🔗 View Details</a>
-  </div>
-</div>
-
+  </section>
 
   <footer>
     &copy; 2025 Map Beyond Border — All rights reserved.
