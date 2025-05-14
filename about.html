@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Map Beyond Border</title>
+
+  <!-- SEO & Meta -->
+  <meta name="description" content="Krishna Wijaya's GIS Portfolio – Map Beyond Border showcases spatial storytelling, map design, and geospatial analysis." />
+  <meta name="author" content="Krishna Wijaya" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Calcite Components -->
+  <script type="module" src="https://js.arcgis.com/calcite-components/2.4.0/calcite.esm.js"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.4.0/calcite.css" />
+
+  <style>
+    :root {
+      --accent-yellow: #FFD700;
+      --dark: #000;
+      --light: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Century Gothic', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--dark);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--light);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 8px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom: 3px solid var(--accent-yellow);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      background-color: var(--dark);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--accent-yellow);
+      color: var(--dark);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    iframe {
+      border-radius: 8px;
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-buttons calcite-button {
+      --calcite-color-brand: var(--dark);
+      border: 2px solid var(--dark);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f5f5f5;
+      border: 2px solid var(--dark);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card calcite-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .cv-download {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cv-download a {
+      color: var(--dark);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Map Beyond Border</div>
+    <nav>
+        <!-- Add active class here for the Home page -->
+        <a class="button" href="index.html">Home</a>
+        <a class="button active" href="about.html">About</a>
+        <div class="dropdown">
+            <a href="#portfolio">Works ▾</a>
+            <div class="dropdown-content">
+                <a class="button" href="portofolio.html">Portfolio</a>
+                <a class="button" href="services.html">Services</a>
+            </div>
+        </div>
+        <a class="button" href="resume.html">Resume</a>
+    </nav>
+</header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align: center;">I'm a GIS enthusiast with passion for maps, spatial storytelling, and geospatial technology for public good. I love combining data, design, and maps to create meaningful and engaging user experiences.</p>
+
+    <div class="social-buttons">
+      <calcite-button icon-start="linkedin" appearance="outline" scale="m" href="https://www.linkedin.com/in/krishna-wijaya-05b10b245/" target="_blank" aria-label="LinkedIn">LinkedIn</calcite-button>
+      <calcite-button icon-start="instagram" appearance="outline" scale="m" href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</calcite-button>
+      <calcite-button icon-start="envelope" appearance="outline" scale="m" href="mailto:krishnawijaya@ymail.com" aria-label="Email">Email</calcite-button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Map Beyond Border — All rights reserved.
+  </footer>
+
+</body>
+</html>
