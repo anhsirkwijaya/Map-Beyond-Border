@@ -1,197 +1,184 @@
-  <style>
-    :root {
-      --accent-yellow: #FFD700;
-      --dark: #000;
-      --light: #fff;
-    }
+:root {
+  --accent-yellow: #FFD700;
+  --dark: #000;
+  --light: #fff;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Century Gothic', sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
-    }
+body {
+  margin: 0;
+  font-family: 'Century Gothic', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
 
-    header {
-      background: var(--dark);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+header {
+  background: var(--dark);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--light);
-    }
 
-    nav {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
+/* Add this new rule to wrap header contents */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav a {
-      color: var(--light);
-      text-decoration: none;
-      font-weight: bold;
-      padding: 6px 8px;
-      transition: all 0.3s;
-    }
+/* Update the header rule if not already full width */
+header {
+  background: var(--dark);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
 
-    nav a:hover,
-    nav a.active {
-      border-bottom: 3px solid var(--accent-yellow);
-    }
 
-    .dropdown {
-      position: relative;
-    }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--light);
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 2rem;
-      background-color: var(--dark);
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-      z-index: 10;
-    }
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 8px;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
 
-    .dropdown-content a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: white;
-      white-space: nowrap;
-    }
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.1); /* darken effect */
+  border-bottom: 3px solid var(--accent-yellow);
+}
 
-    .dropdown-content a:hover {
-      background: var(--accent-yellow);
-      color: var(--dark);
-    }
+.dropdown {
+  position: relative;
+}
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  background-color: var(--dark);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
 
-    .portfolio-grid {
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background: var(--accent-yellow);
+  color: var(--dark);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-buttons calcite-button {
+  --calcite-color-brand: var(--dark);
+  border: 2px solid var(--dark);
+}
+
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
+.card {
+  background: #f5f5f5;
   border: 2px solid var(--dark);
-}
-
-.portfolio-item img {
-  width: 100%;
-  display: block;
-  transition: filter 0.3s ease;
-}
-
-.portfolio-item:hover img {
-  filter: brightness(60%);
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: var(--light);
+  border-radius: 8px;
+  padding: 2rem;
   text-align: center;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+.card calcite-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
 
-    iframe {
-      border-radius: 8px;
-      width: 100%;
-      height: 500px;
-      border: 0;
-    }
+.cv-download {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
+.cv-download a {
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-    .social-buttons calcite-button {
-      --calcite-color-brand: var(--dark);
-      border: 2px solid var(--dark);
-    }
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: #f5f5f5;
-      border: 2px solid var(--dark);
-      border-radius: 8px;
-      padding: 2rem;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card calcite-icon {
-      width: 36px;
-      height: 36px;
-      color: var(--dark);
-      margin-bottom: 1rem;
-    }
-
-    .cv-download {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .cv-download a {
-      color: var(--dark);
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
 /* Portfolio grid styling */
 .portfolio-grid {
   display: grid;
@@ -246,6 +233,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  flex-direction: column;
 }
 
 .lightbox-img {
@@ -274,8 +262,8 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Zoom buttons */
-#zoom-in, #zoom-out {
+#zoom-in,
+#zoom-out {
   font-size: 24px;
 }
 
@@ -283,7 +271,8 @@ button:hover {
   font-size: 22px;
 }
 
-#share-twitter, #share-facebook {
+#share-twitter,
+#share-facebook {
   font-size: 20px;
 }
 
@@ -292,6 +281,3 @@ button:hover {
   color: #fff;
   text-decoration: none;
 }
-
-
-  </style>
